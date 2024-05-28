@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(2, auto);
+            gap: 5px;
+          }
+          
+          .column {
+            background-color: #f0f0f0;
+          }
+          
+          .full-width-column {
+            background-color: #ccc;
+            grid-column: span 2;
+          }
+
+          .nested-container {
+            display: grid;
+            grid-auto-flow: column;
+            gap: 15px;
+            margin: 0 5%;
+          }
+
+          .nested-item {
+            border: 1px solid black;
+          }
+
+          .text-right {
+            text-align: right;
+            padding-right: 100px;
+          }
+          
+    </style>
+    <div class="container">
+        <div class="column">Column 1</div>
+        <div class="column text-right">
+            <div>Info 1</div>
+            <div>Info 2</div>
+        </div>
+        <div class="full-width-column">
+            <div class="nested-container">
+                <div class="nested-item">Item 1</div>
+                <div class="nested-item">Item 2</div>
+                <div class="nested-item">Item 3</div>
+                <div class="nested-item">Item 4</div>
+                <div class="nested-item">Item 5</div>
+              </div>
+        </div>
+      </div>
+      
+</body>
+</html>
